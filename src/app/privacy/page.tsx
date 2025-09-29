@@ -1,101 +1,150 @@
-import type { Metadata } from "next"
-import Link from "next/link"
-import { ArrowLeft } from "lucide-react"
+import { ArrowLeft } from "lucide-react";
+import Link from "next/link";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
-export const metadata: Metadata = {
-  title: "Privacy Policy - SAX Video Downloader",
-  description: "Privacy Policy for SAX Video Downloader",
-}
+export default function PrivacyPage() {
+	return (
+		<div className='min-h-screen bg-slate-900 p-4'>
+			<div className='max-w-2xl mx-auto'>
+				{/* Header */}
+				<div className='flex items-center gap-4 mb-6'>
+					<Link
+						// href='/home'
+						href='/start'
+						className='p-2 hover:bg-slate-800 rounded-lg transition-colors'>
+						<ArrowLeft className='w-6 h-6 text-slate-300' />
+					</Link>
+					<h1 className='text-2xl font-bold text-white'>
+						Privacy Policy
+					</h1>
+				</div>
 
-export default function PrivacyPolicy() {
-  return (
-    <main className="min-h-screen bg-gradient-to-b from-green-50 to-white">
-      <div className="container px-4 py-8 mx-auto max-w-4xl">
-        <Link href="/" className="inline-flex items-center mb-6 text-green-600 hover:text-green-700">
-          <ArrowLeft className="w-4 h-4 mr-2" />
-          Back to Home
-        </Link>
+				<Card className='bg-slate-800 border-slate-700'>
+					<CardHeader>
+						<CardTitle className='text-orange-400'>
+							Privacy Policy
+						</CardTitle>
+						<p className='text-slate-400 text-sm'>
+							Last updated: December 29, 2024
+						</p>
+					</CardHeader>
+					<CardContent className='space-y-6 text-slate-300'>
+						<section>
+							<h3 className='text-lg font-semibold text-white mb-2'>
+								Information We Collect
+							</h3>
+							<p>
+								Quizrunz is designed to work without requiring
+								personal information. We only collect:
+							</p>
+							<ul className='list-disc list-inside space-y-1 mt-2'>
+								<li>
+									Quiz performance data (stored locally on
+									your device)
+								</li>
+								<li>
+									Coin balance (stored locally on your device)
+								</li>
+								<li>Basic usage analytics (anonymized)</li>
+							</ul>
+						</section>
 
-        <div className="p-8 bg-white rounded-xl shadow-md">
-          <h1 className="mb-6 text-3xl font-bold text-green-800">Privacy Policy</h1>
+						<section>
+							<h3 className='text-lg font-semibold text-white mb-2'>
+								Local Storage
+							</h3>
+							<p>
+								Your quiz progress and coin balance are stored
+								locally in your browser&apos;s storage. This
+								data:
+							</p>
+							<ul className='list-disc list-inside space-y-1 mt-2'>
+								<li>Remains on your device only</li>
+								<li>Is not transmitted to our servers</li>
+								<li>
+									Can be cleared by clearing your browser data
+								</li>
+								<li>Is not accessible to other websites</li>
+							</ul>
+						</section>
 
-          <div className="prose prose-green max-w-none">
-            <p className="text-gray-700">Last updated: April 20, 2023</p>
+						<section>
+							<h3 className='text-lg font-semibold text-white mb-2'>
+								Cookies
+							</h3>
+							<p>
+								We may use cookies to enhance your experience,
+								but no personal information is stored in these
+								cookies.
+							</p>
+						</section>
 
-            <h2>1. Introduction</h2>
-            <p>
-              Welcome to SAX Video Downloader. We respect your privacy and are committed to protecting your personal
-              data. This privacy policy will inform you about how we look after your personal data when you visit our
-              website and tell you about your privacy rights and how the law protects you.
-            </p>
+						<section>
+							<h3 className='text-lg font-semibold text-white mb-2'>
+								Third-Party Services
+							</h3>
+							<p>
+								We may use third-party analytics services to
+								understand how our service is used. These
+								services may collect anonymized usage data.
+							</p>
+						</section>
 
-            <h2>2. The Data We Collect About You</h2>
-            <p>
-              We may collect, use, store and transfer different kinds of personal data about you which we have grouped
-              together as follows:
-            </p>
-            <ul>
-              <li>
-                <strong>Identity Data</strong> includes first name, last name, username or similar identifier.
-              </li>
-              <li>
-                <strong>Contact Data</strong> includes email address and telephone numbers.
-              </li>
-              <li>
-                <strong>Technical Data</strong> includes internet protocol (IP) address, your login data, browser type
-                and version, time zone setting and location, browser plug-in types and versions, operating system and
-                platform, and other technology on the devices you use to access this website.
-              </li>
-              <li>
-                <strong>Usage Data</strong> includes information about how you use our website, products and services.
-              </li>
-            </ul>
+						<section>
+							<h3 className='text-lg font-semibold text-white mb-2'>
+								Data Security
+							</h3>
+							<p>
+								Since we don&apos;t collect personal
+								information, there&apos;s minimal risk to your
+								privacy. All quiz data is stored locally on your
+								device.
+							</p>
+						</section>
 
-            <h2>3. How We Use Your Personal Data</h2>
-            <p>
-              We will only use your personal data when the law allows us to. Most commonly, we will use your personal
-              data in the following circumstances:
-            </p>
-            <ul>
-              <li>Where we need to perform the contract we are about to enter into or have entered into with you.</li>
-              <li>
-                Where it is necessary for our legitimate interests (or those of a third party) and your interests and
-                fundamental rights do not override those interests.
-              </li>
-              <li>Where we need to comply with a legal obligation.</li>
-            </ul>
+						<section>
+							<h3 className='text-lg font-semibold text-white mb-2'>
+								Children&apos;s Privacy
+							</h3>
+							<p>
+								Our service is suitable for all ages. We do not
+								knowingly collect personal information from
+								children under 13.
+							</p>
+						</section>
 
-            <h2>4. Data Security</h2>
-            <p>
-              We have put in place appropriate security measures to prevent your personal data from being accidentally
-              lost, used or accessed in an unauthorized way, altered or disclosed. In addition, we limit access to your
-              personal data to those employees, agents, contractors and other third parties who have a business need to
-              know.
-            </p>
+						<section>
+							<h3 className='text-lg font-semibold text-white mb-2'>
+								Changes to Privacy Policy
+							</h3>
+							<p>
+								We may update this privacy policy from time to
+								time. We will notify you of any changes by
+								posting the new policy on this page.
+							</p>
+						</section>
 
-            <h2>5. Data Retention</h2>
-            <p>
-              We will only retain your personal data for as long as reasonably necessary to fulfill the purposes we
-              collected it for, including for the purposes of satisfying any legal, regulatory, tax, accounting or
-              reporting requirements.
-            </p>
+						<section>
+							<h3 className='text-lg font-semibold text-white mb-2'>
+								Contact Us
+							</h3>
+							<p>
+								If you have any questions about this privacy
+								policy, please contact us at
+								support@quizrunz.com.
+							</p>
+						</section>
 
-            <h2>6. Your Legal Rights</h2>
-            <p>
-              Under certain circumstances, you have rights under data protection laws in relation to your personal data,
-              including the right to request access, correction, erasure, restriction, transfer, to object to
-              processing, to portability of data and (where the lawful ground of processing is consent) to withdraw
-              consent.
-            </p>
-
-            <h2>7. Contact Us</h2>
-            <p>
-              If you have any questions about this privacy policy or our privacy practices, please contact us through
-              our contact page.
-            </p>
-          </div>
-        </div>
-      </div>
-    </main>
-  )
+						<div className='bg-gradient-to-r from-orange-400/20 to-yellow-500/20 p-4 rounded-lg border border-orange-500/30'>
+							<p className='text-orange-300 font-medium'>
+								Your privacy is important to us. We&apos;re
+								committed to protecting your data and providing
+								a safe quiz experience.
+							</p>
+						</div>
+					</CardContent>
+				</Card>
+			</div>
+		</div>
+	);
 }

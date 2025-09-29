@@ -1,200 +1,61 @@
-import type { Metadata } from "next";
-import Link from "next/link";
-import { ArrowLeft, Download, Shield, Zap } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
+import { ArrowLeft } from "lucide-react"
+import Link from "next/link"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 
-export const metadata: Metadata = {
-	title: "About Us - SAX Video Downloader",
-	description: "Learn more about SAX Video Downloader",
-};
+export default function AboutPage() {
+  return (
+    <div className="min-h-screen bg-slate-900 p-4">
+      <div className="max-w-2xl mx-auto">
+        {/* Header */}
+        <div className="flex items-center gap-4 mb-6">
+          <Link href="/home" className="p-2 hover:bg-slate-800 rounded-lg transition-colors">
+            <ArrowLeft className="w-6 h-6 text-slate-300" />
+          </Link>
+          <h1 className="text-2xl font-bold text-white">About Quizrunz</h1>
+        </div>
 
-export default function About() {
-	return (
-		<main className='min-h-screen bg-gradient-to-b from-green-50 to-white'>
-			<div className='container px-4 py-8 mx-auto max-w-6xl'>
-				<Link
-					href='/'
-					className='inline-flex items-center mb-6 text-green-600 hover:text-green-700'>
-					<ArrowLeft className='w-4 h-4 mr-2' />
-					Back to Home
-				</Link>
+        <Card className="bg-slate-800 border-slate-700">
+          <CardHeader>
+            <CardTitle className="text-orange-400">Welcome to Quizrunz</CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-4 text-slate-300">
+            <p>
+              Quizrunz is an engaging quiz platform where knowledge meets rewards. Test your skills across various
+              categories and earn coins for every correct answer!
+            </p>
 
-				<div className='text-center mb-12'>
-					<h1 className='text-4xl font-bold text-green-800 mb-4'>
-						About Us
-					</h1>
-					<p className='text-green-700 max-w-2xl mx-auto'>
-						Learn more about SAX Video Downloader and our mission
-						to make content downloading simple and accessible.
-					</p>
-				</div>
+            <h3 className="text-lg font-semibold text-white">How It Works</h3>
+            <ul className="list-disc list-inside space-y-2">
+              <li>Choose from 40+ exciting quiz categories</li>
+              <li>Pay entry fees using your earned coins</li>
+              <li>Answer questions within the time limit</li>
+              <li>Earn coins based on your performance</li>
+              <li>Build your coin balance and play more quizzes</li>
+            </ul>
 
-				<div className='grid grid-cols-1 md:grid-cols-2 gap-8 mb-12'>
-					<div>
-						<h2 className='text-2xl font-semibold text-green-800 mb-4'>
-							Our Story
-						</h2>
-						<p className='text-green-700 mb-4'>
-							SAX Video Downloader was founded in 2025 with a
-							simple mission: to make it easy for everyone to
-							download and save their favorite content from social
-							media platforms.
-						</p>
-						<p className='text-green-700 mb-4'>
-							We recognized that many people wanted to save
-							videos, photos, and other content from platforms
-							like YouTube, Instagram, and Facebook, but were
-							frustrated by complicated processes or unreliable
-							tools.
-						</p>
-						<p className='text-green-700'>
-							Our team of developers and designers came together
-							to create a solution that is not only powerful and
-							reliable but also simple and intuitive to use.
-							Today, SAX Video Downloader serves thousands of
-							users worldwide, helping them save and enjoy their
-							favorite content offline.
-						</p>
-					</div>
+            <h3 className="text-lg font-semibold text-white">Features</h3>
+            <ul className="list-disc list-inside space-y-2">
+              <li>No registration required - play as a guest</li>
+              <li>Wide variety of topics and difficulty levels</li>
+              <li>Real-time scoring and instant rewards</li>
+              <li>Track your progress and statistics</li>
+              <li>Mobile-optimized experience</li>
+            </ul>
 
-					<div className='green-pattern rounded-xl p-8 flex items-center justify-center'>
-						<div className='w-24 h-24 rounded-full green-gradient flex items-center justify-center'>
-							<Download className='w-12 h-12 text-white' />
-						</div>
-					</div>
-				</div>
+            <h3 className="text-lg font-semibold text-white">Categories</h3>
+            <p>
+              Explore quizzes in Business & Economics, Science & Technology, Sports, Entertainment, History, Geography,
+              Mathematics, Literature, and more!
+            </p>
 
-				<div className='mb-12'>
-					<h2 className='text-2xl font-semibold text-green-800 mb-6 text-center'>
-						Our Values
-					</h2>
-
-					<div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
-						<Card className='border-green-200 shadow-md overflow-hidden'>
-							<div className='p-1 green-gradient'></div>
-							<CardContent className='p-6 text-center'>
-								<div className='w-16 h-16 rounded-full green-gradient flex items-center justify-center mx-auto mb-4'>
-									<Zap className='w-8 h-8 text-white' />
-								</div>
-								<h3 className='text-xl font-semibold text-green-800 mb-2'>
-									Simplicity
-								</h3>
-								<p className='text-green-700'>
-									We believe that technology should be
-									accessible to everyone. That&apos;s why
-									we&apos;ve designed our tool to be as simple
-									and intuitive as possible, requiring no
-									technical knowledge to use.
-								</p>
-							</CardContent>
-						</Card>
-
-						<Card className='border-green-200 shadow-md overflow-hidden'>
-							<div className='p-1 green-gradient'></div>
-							<CardContent className='p-6 text-center'>
-								<div className='w-16 h-16 rounded-full green-gradient flex items-center justify-center mx-auto mb-4'>
-									<Shield className='w-8 h-8 text-white' />
-								</div>
-								<h3 className='text-xl font-semibold text-green-800 mb-2'>
-									Reliability
-								</h3>
-								<p className='text-green-700'>
-									We understand that you rely on our tool to
-									save content that matters to you.
-									That&apos;s why we&apos;re committed to
-									providing a reliable service that works
-									consistently across different platforms.
-								</p>
-							</CardContent>
-						</Card>
-
-						<Card className='border-green-200 shadow-md overflow-hidden'>
-							<div className='p-1 green-gradient'></div>
-							<CardContent className='p-6 text-center'>
-								<div className='w-16 h-16 rounded-full green-gradient flex items-center justify-center mx-auto mb-4'>
-									<Download className='w-8 h-8 text-white' />
-								</div>
-								<h3 className='text-xl font-semibold text-green-800 mb-2'>
-									Accessibility
-								</h3>
-								<p className='text-green-700'>
-									We believe that everyone should have access
-									to the content they love. Our tool is
-									designed to be accessible to users of all
-									abilities and backgrounds, with a focus on
-									inclusive design.
-								</p>
-							</CardContent>
-						</Card>
-					</div>
-				</div>
-
-				<div className='mb-12'>
-					<h2 className='text-2xl font-semibold text-green-800 mb-6 text-center'>
-						Meet Our Team
-					</h2>
-
-					<div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6'>
-						{[
-							{
-								name: "Zaya Singh",
-								role: "Founder & CEO",
-								image: "/placeholder.svg?height=200&width=200",
-							},
-							{
-								name: "Amit Vedanta",
-								role: "Lead Developer",
-								image: "/placeholder.svg?height=200&width=200",
-							},
-							{
-								name: "Priya Sharma",
-								role: "UI/UX Designer",
-								image: "/placeholder.svg?height=200&width=200",
-							},
-							{
-								name: "Sara Patel",
-								role: "Marketing Manager",
-								image: "/placeholder.svg?height=200&width=200",
-							},
-						].map((member, index) => (
-							<Card
-								key={index}
-								className='border-green-200 shadow-md overflow-hidden'>
-								<div className='p-1 green-gradient'></div>
-								<CardContent className='p-6 text-center'>
-									<img
-										src={member.image || "/placeholder.svg"}
-										alt={member.name}
-										className='w-24 h-24 rounded-full mx-auto mb-4 object-cover border-2 border-green-500'
-									/>
-									<h3 className='text-lg font-semibold text-green-800'>
-										{member.name}
-									</h3>
-									<p className='text-green-700'>
-										{member.role}
-									</p>
-								</CardContent>
-							</Card>
-						))}
-					</div>
-				</div>
-
-				<div className='text-center'>
-					<h2 className='text-2xl font-semibold text-green-800 mb-4'>
-						Get in Touch
-					</h2>
-					<p className='text-green-700 max-w-2xl mx-auto mb-6'>
-						Have questions or feedback? We&apos;d love to hear from
-						you. Contact our team and we&apos;ll get back to you as
-						soon as possible.
-					</p>
-					<Link
-						href='/contact'
-						className='inline-block px-6 py-3 text-white rounded-md green-gradient hover:opacity-90 transition-opacity'>
-						Contact Us
-					</Link>
-				</div>
-			</div>
-		</main>
-	);
+            <div className="bg-gradient-to-r from-orange-400/20 to-yellow-500/20 p-4 rounded-lg border border-orange-500/30">
+              <p className="text-orange-300 font-medium">
+                Start your quiz journey today and see how much you can earn!
+              </p>
+            </div>
+          </CardContent>
+        </Card>
+      </div>
+    </div>
+  )
 }
