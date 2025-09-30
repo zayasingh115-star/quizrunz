@@ -54,7 +54,7 @@ children: React.ReactNode;
 }) {
 return ( <html lang="en" suppressHydrationWarning> <head suppressHydrationWarning> <meta
  				name="google-site-verification"
- 				content="YOUR_GOOGLE_SITE-VERIFICATION_CODE"
+ 				content="YOUR_GOOGLE_SITE_VERIFICATION_CODE"
  			/>
 
 ```
@@ -73,7 +73,7 @@ return ( <html lang="en" suppressHydrationWarning> <head suppressHydrationWarnin
 				`}
 			</Script>
 
-			{/* ✅ Google AdSense (raw script as requested) */}
+			{/* ✅ Google AdSense (inserted exactly as provided) */}
 			<script
 				async
 				src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2277180793314588"
@@ -95,6 +95,4 @@ return ( <html lang="en" suppressHydrationWarning> <head suppressHydrationWarnin
 		</body>
 	</html>
 );
-```
-
 }
