@@ -2,7 +2,7 @@ import type React from "react";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Script from 'next/script';
+import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -53,30 +53,14 @@ export default function RootLayout({
 	children: React.ReactNode;
 }) {
 	return (
-		<html lang='en' suppressHydrationWarning>
+		<html lang="en" suppressHydrationWarning>
 			<head suppressHydrationWarning>
 				<meta
-					name='google-site-verification'
-					content='YOUR_GOOGLE_SITE_VERIFICATION_CODE'
+					name="google-site-verification"
+					content="YOUR_GOOGLE_SITE_VERIFICATION_CODE"
 				/>
-				{/* Google Analytics */}
-				<script
-					async
-					src='https://www.googletagmanager.com/gtag/js?id=G-0FM7J5XPEW'
-				/>
+
 				{/* ✅ Google Analytics */}
-				{/* <script
-					dangerouslySetInnerHTML={{
-						__html: `
-							window.dataLayer = window.dataLayer || [];
-							function gtag(){dataLayer.push(arguments);}
-							gtag('js', new Date());
-							gtag('config', 'GOOGLE_ANALYTICS_ID', {
-								'page_path': window.location.pathname,
-							});
-						`,
-					}}
-				/> */}
 				<Script
 					async
 					src="https://www.googletagmanager.com/gtag/js?id=G-0FM7J5XPEW"
@@ -92,19 +76,23 @@ export default function RootLayout({
 				</Script>
 
 				{/* ✅ Google AdSense */}
-			<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2277180793314588"
-     crossorigin="anonymous"></script>
+				<Script
+					async
+					src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2277180793314588"
+					crossOrigin="anonymous"
+					strategy="afterInteractive"
+				/>
 
-				
-				<meta name='application-name' content='Quizrunz' />
-				<meta name='format-detection' content='telephone=no' />
-				<meta name='theme-color' content='#000000' />
-				<link rel='shortcut icon' href='/favicon.ico' />
+				<meta name="application-name" content="Quizrunz" />
+				<meta name="format-detection" content="telephone=no" />
+				<meta name="theme-color" content="#000000" />
+				<link rel="shortcut icon" href="/favicon.ico" />
 			</head>
 			<body
 				className={`${inter.className} bg-gradient-to-br from-slate-900 to-slate-300`}
-				suppressHydrationWarning>
-				<div className='min-h-screen bg-slate-900 max-w-md mx-auto relative'>
+				suppressHydrationWarning
+			>
+				<div className="min-h-screen bg-slate-900 max-w-md mx-auto relative">
 					{children}
 				</div>
 			</body>
