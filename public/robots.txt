@@ -1,0 +1,43 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://quizrunz.com/sitemap.xml
+
+# Crawl-delay in seconds
+Crawl-delay: 10
+
+# Disallow specific paths
+Disallow: /api/
+Disallow: /_next/
+Disallow: /static/
+Disallow: /node_modules/
+
+# Allow specific paths
+Allow: /quiz/
+Allow: /category/
+Allow: /user/
+
+# Googlebot directives
+User-agent: Googlebot
+Allow: /
+
+# Bingbot directives
+User-agent: Bingbot
+Allow: /
+
+# Yandex directives
+User-agent: Yandex
+Allow: /
+
+# Baidu directives
+User-agent: Baiduspider
+Allow: /
+
+# Allow image crawling
+User-agent: Googlebot-Image
+Allow: /
+
+# Allow video crawling
+User-agent: Googlebot-Video
+Allow: /
