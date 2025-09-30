@@ -92,8 +92,8 @@ export default function RootLayout({
 				</Script>
 
 				{/* ✅ Google AdSense */}
-				<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6545319746355141"
-     crossOrigin="anonymous"></script>
+				<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2277180793314588"
+     crossorigin="anonymous"></script>
 
 				
 				<meta name='application-name' content='Quizrunz' />
